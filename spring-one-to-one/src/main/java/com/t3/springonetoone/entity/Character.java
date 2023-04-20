@@ -24,6 +24,8 @@ public class Character {
     @Column(name = "character_class")
     private String characterClass;
 
-    //private Pet pet;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "pet_id", referencedColumnName = "id")
+    private Pet petId;
     
 }
