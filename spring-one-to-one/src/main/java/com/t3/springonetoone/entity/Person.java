@@ -6,9 +6,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity // Define a classe como uma entidade
-@Table(name="characters")
+@Table(name="persons")
 @Getter @Setter @NoArgsConstructor // Modo Preguiça
-public class Character {
+public class Person {
 
     @Id
     @GeneratedValue

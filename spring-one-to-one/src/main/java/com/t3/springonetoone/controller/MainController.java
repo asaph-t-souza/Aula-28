@@ -5,13 +5,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.t3.springonetoone.repository.CharacterRepository;
+import com.t3.springonetoone.repository.PersonRepository;
 
 @Controller
 public class MainController {
 
     @Autowired
-    private CharacterRepository charRepo;
+    private PersonRepository charRepo;
 
     @GetMapping("/")
     public String index() {
