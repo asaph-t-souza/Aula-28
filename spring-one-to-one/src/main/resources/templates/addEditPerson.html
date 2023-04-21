@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    <div th:replace="~{fragments/headerAndFooter :: my-header}"></div>
+
+    <h2>Create or edit a person</h2>
+    <div>
+        <form th:object="${person}" th:action="@{/persons/save}" method="post">
+            <p>Person Information</p>
+            <label>Name: </label> <input type="text" th:field="*{name}" />
+            <label>Level: </label> <input type="text" th:field="*{characterLevel}" />
+            <label>Class: </label> <input type="text" th:field="*{characterClass}" />
+            <br/>
+            <p>Pet Information</p>
+            <label>Pet Name: </label> <input type="text" th:field="*{petId.name}" />
+            <label>Pet Race: </label> <input type="text" th:field="*{petId.race}" />
+            <label>Pet Color: </label> <input type="text" th:field="*{petId.color}" />
+            <label>Pet Level: </label> <input type="text" th:field="*{petId.petLevel}" />
+        </form>
+    </div>
+
+    <div th:replace="~{fragments/headerAndFooter :: my-footer}"></div>
+</body>
+</html>
