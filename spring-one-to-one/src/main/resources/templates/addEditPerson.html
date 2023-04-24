@@ -10,16 +10,18 @@
     <h2>Create or edit a person</h2>
     <div>
         <form th:object="${person}" th:action="@{/persons/save}" method="post">
-            <p>Person Information</p>
+            <h3>Person Information</h3>
             <label>Name: </label> <input type="text" th:field="*{name}" />
             <label>Level: </label> <input type="text" th:field="*{characterLevel}" />
             <label>Class: </label> <input type="text" th:field="*{characterClass}" />
-            <br/>
-            <p>Pet Information</p>
+            <hr/>
+            <h4>Pet Information</h4>
             <label>Pet Name: </label> <input type="text" th:field="*{petId.name}" />
             <label>Pet Race: </label> <input type="text" th:field="*{petId.race}" />
             <label>Pet Color: </label> <input type="text" th:field="*{petId.color}" />
             <label>Pet Level: </label> <input type="text" th:field="*{petId.petLevel}" />
+            <br/>
+            <button type="submit">Save</button>
         </form>
     </div>
 
